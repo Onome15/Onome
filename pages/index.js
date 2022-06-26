@@ -33,7 +33,7 @@ const cookies = ({ cookies }) => {
           <span className="float-right text-red-700 snipcart-checkout title">Cart</span>
         </h3>
         <hr className="style-eight" />
-        <div className="grid place-items-center mt-10 gap-10 grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <div className="grid place-items-center mt-10 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {cookies.map(cookies => (
 
             <div key={cookies.id} className='text-blue-700 relative mb-10 max-w-sm rounded shadow-lg hover:shadow-xl h-full'>
