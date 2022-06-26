@@ -25,7 +25,7 @@ const cookies = ({ cookies }) => {
 
       {cookies.map(cookies => (
 
-        <div key={cookies.id} className='text-blue-700 relative mb-10 max-w-sm rounded shadow-lg hover:shadow-xl h-full sm:mx-10'>
+        <div key={cookies.id} className='text-blue-700 relative mb-10 max-w-sm rounded shadow-lg hover:shadow-xl h-full'>
           <img src={cookies.image} alt={`${cookies.name}`} className="w-full" />
           <div className="px-6 py-4 ">
             <div className="text-3xl mb-5">
@@ -36,7 +36,7 @@ const cookies = ({ cookies }) => {
 
             <p className='flex-1'>{cookies.description}</p> <br /><br /><br />
 
-            <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-64 sm:w-32 btn flex-1 text-2xl bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent items-center rounded justify-self-center mt-10">Add To Cart</button>
+            <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-64 btn flex-1 text-2xl bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent items-center rounded justify-self-center mt-10">Add To Cart</button>
           </div>
         </div>
 
