@@ -20,19 +20,48 @@ a {
   box-sizing: border-box;
 }
 
-/* .btn{
-  border-radius: 10px;
-  position: absolute;
-  bottom: 10px;
+
+@media only screen and (min-width: 670px) {
+  .btn{
+    width: 225px;
+  }
 }
 
-.cad {
-  position: relative;
-  background-color: red;
-} */
+/* Glyph, by Harry Roberts */
 
-.ff{
-  display: flex;
-  flex: 1;
+hr.style-eight {
+  overflow: visible; /* For IE */
+  padding: 0;
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+  border-top: medium double rgb(180, 44, 44);
   color: red;
+  text-align: center;
+}
+hr.style-eight:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+hr.style-eight:before { /* Not really supposed to work, but does */
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+@media only screen and (min-width: 450px){
+  .title{
+    font-size: 10px;
+  }
 }
