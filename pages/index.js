@@ -31,8 +31,8 @@ const cookies = ({ cookies }) => {
       </Head>
       <main className="container">
       
-        <h1 className="text-xl md:text-3xl m-2 md:m-5 font-bold font-mono text-green-700">Phone-mall
-          <span className="float-right text-l md:text-2xl p-2 rounded-lg bg-transparent hover:bg-purple-300 text-purple-900 snipcart-checkout title">  <span className="float-left"><FiShoppingBag size={25}/></span> View Cart</span>
+        <h1 className="text-xl md:text-3xl m-2 md:m-5 font-bold font-mono text-green-700">PHONE-MALL
+          <span className="float-right text-l md:text-2xl rounded-lg bg-transparent hover:bg-purple-300 text-purple-700 p-1 snipcart-checkout title">  <span className="float-left"><FiShoppingBag size={25}/></span> View</span>
         </h1>
         <hr className="style-eight" />
         <div className="grid place-items-center mt-10 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
@@ -42,15 +42,15 @@ const cookies = ({ cookies }) => {
               <img src={cookies.image} alt={`${cookies.name}`} className="w-full" />
               <div className="px-6 py-4 ">
                 <div className="text-2xl mb-5">
-                  <h3 className="text-purple-900 font-bold uppercase">{cookies.name}
+                  <h3 className="text-purple-700 font-bold uppercase">{cookies.name}
                     <span className="float-right text-green-700"> ${cookies.price}</span>
                   </h3>
                 </div>
                 <p className='flex-1'>{cookies.description}</p> <br /><br /><br />
                 <button className="absolute bottom-10 left-1/2 transform 
-                -translate-x-1/2 w-full btn flex-1 text-xl 
-                bg-transparent hover:bg-blue-500 text-blue-700 font-semibold 
-                hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent 
+                -translate-x-1/2 w-64 btn flex-1 text-xl 
+                bg-transparent hover:bg-purple-500 text-purple-700 font-semibold 
+                hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent 
                 items-center rounded justify-self-center mt-10 snipcart-add-item"
                   data-item-id={cookies.id}
                   data-item-image={cookies.image}
