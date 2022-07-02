@@ -1,17 +1,5 @@
 import React from 'react'
-import Head from "next/head";
-import Script from 'next/script';
 import Butter from "buttercms";
-
-const details = (product) => {
-  return (
-    <>
-    <h1>{product.name}</h1> 
-    </>
-  )
-}
-
-export default details
 
 
 export const getStaticPaths = async () => {
@@ -26,8 +14,7 @@ const products = data.products;
   const paths = products.map(product => {
     return {
       params: { id: product.id.toString() }
-    }
-  })
+    }})
 
   return {
     paths,
@@ -35,14 +22,13 @@ const products = data.products;
   }
 }
 
+
 export async function getStaticProps(context) {
   const butter =Butter(process.env.REACT_APP_BUTTER_ECOMMERCE);
 
   const id = context.params.id;
 
-  const res = await butter.content.retrieve(["products"] + id, {
-    order: "name",
-  });
+  const res = await butter.content.retrieve("*" + id);
   const { data } = await res.data;
   const product = data.products ;
   return {
@@ -52,3 +38,11 @@ export async function getStaticProps(context) {
   }
 }
 
+const details = (product) => {
+  return (
+    <>
+    <h1>{product.name}</h1> 
+    </>
+  )
+}
+export default details

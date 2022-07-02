@@ -2,6 +2,7 @@ import Head from "next/head";
 import Script from 'next/script';
 import { MdAddShoppingCart } from 'react-icons/md';
 import Nav from '../Components/Nav'
+import Footer from '../Components/Footer'
 import Link from "next/link";
 import { useState } from "react";
 import Butter from "buttercms";
@@ -10,32 +11,31 @@ import Butter from "buttercms";
 
 const products = ({ products }) => {
 
-  
+
   return (
     <>
-       <Head>
+      <Head>
         <title>Shop</title>
         <link rel="preconnect" href="https://app.snipcart.com" />
         <link rel="preconnect" href="https://cdn.snipcart.com" />
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
-      </Head> 
+      </Head>
       <main className="container">
-     
-        <Nav/>
-     
+
+        <Nav />
+
         <div className="grid place-items-center mt-32 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {products.map(product => (
 
-            <div  key={product.id} className=' relative mb-10 max-w-sm rounded shadow-lg hover:shadow-xl h-full'>
-              
-           <img src={product.image} alt={`${product.name}`} className="w-full" />
-              <div className="px-6 py-4 items-center">
-                <div className="text-2xl mb-5">
+            <div key={product.id} className=' relative mb-10 max-w-sm rounded shadow-lg hover:shadow-xl h-full'>
+              <img src={product.image} alt={`${product.name}`} className="w-full" />
+              <div className="px-4 py-4 items-center">
+                <div className="text-xl mb-5">
                   <h3 className="text-purple-700 font-bold uppercase">{product.name}
-                    <span className="float-right text-green-700"> ${product.price}</span>
+                    <span className="float-right text-green-500"> ${product.price}</span>
                   </h3>
                 </div>
-                <Link href={"/product/" + product.id } ><a className='flex-1 text-blue-500 underline justify-self-center'> Indvidual Product Description</a></Link> <br /><br /><br />
+                <p className='flex-1 justify-self-center'> {product.description}</p> <br /><br />
                 <button className="absolute bottom-10 left-1/2 transform 
                 -translate-x-1/2 w-64 sm:w-52 btn flex-1 text-xl 
                 bg-transparent hover:bg-purple-500 text-purple-700 font-semibold 
@@ -48,16 +48,17 @@ const products = ({ products }) => {
                   data-item-description={product.description}
                   data-item-price={product.price}
                 >
-        
-                  <span className="float-left"><MdAddShoppingCart size={25} /></span>Add To Cart
+
+                  <span className="float-left"><MdAddShoppingCart size={25} /></span>Addd To Cart
 
                 </button>
-              </div> 
-              
-              
+              </div>
+
+
             </div>
           ))}
         </div>
+        <Footer />
       </main>
       <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js" />
       <div hidden id="snipcart" data-api-key="OTYwMzkxMzktOWYyNy00NWY3LTlmMGYtOTFhOTJkYjM0OTI0NjM3OTE4MjY5OTY4OTQ1Njcy"></div>
@@ -71,7 +72,7 @@ export default products;
 
 export async function getStaticProps() {
 
-  const butter =Butter(process.env.REACT_APP_BUTTER_ECOMMERCE);
+  const butter = Butter(process.env.REACT_APP_BUTTER_ECOMMERCE);
   const res = await butter.content.retrieve(["products"], {
     order: "name",
   });
