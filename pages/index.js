@@ -3,14 +3,9 @@ import Script from 'next/script';
 import { MdAddShoppingCart } from 'react-icons/md';
 import Nav from '../Components/Nav'
 import Footer from '../Components/Footer'
-import Link from "next/link";
-import { useState } from "react";
 import Butter from "buttercms";
 
-
-
 const products = ({ products }) => {
-
 
   return (
     <>
@@ -20,10 +15,9 @@ const products = ({ products }) => {
         <link rel="preconnect" href="https://cdn.snipcart.com" />
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
       </Head>
+
       <main className="container">
-
         <Nav />
-
         <div className="grid place-items-center mt-32 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {products.map(product => (
 
@@ -48,13 +42,9 @@ const products = ({ products }) => {
                   data-item-description={product.description}
                   data-item-price={product.price}
                 >
-
                   <span className="float-left"><MdAddShoppingCart size={25} /></span>Addd To Cart
-
                 </button>
               </div>
-
-
             </div>
           ))}
         </div>
@@ -65,14 +55,10 @@ const products = ({ products }) => {
     </>
   )
 }
-
 export default products;
 
-
-
 export async function getStaticProps() {
-
-  const butter = Butter(process.env.REACT_APP_BUTTER_ECOMMERCE);
+  const butter = Butter("69cb07d577457e0eb1ac7e197b31e4f94eb41825");
   const res = await butter.content.retrieve(["products"], {
     order: "name",
   });
