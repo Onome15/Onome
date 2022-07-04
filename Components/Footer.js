@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="bg-gray-50 text-center lg:text-left text-2xl -mx-10">
             <hr className="footer" />
-            <div className="text-center p-3">
+            <div className="text-center p-3 mb-4 foot">
                 <ul className="place-content-center">
                     <li className="inline">
                         <Link href="https://github.com/Onome15" >
