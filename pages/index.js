@@ -2,9 +2,12 @@ import Head from "next/head";
 import Script from 'next/script';
 import { MdAddShoppingCart } from 'react-icons/md';
 // import Nav from '../Components/Nav'
-import Footer from '../Components/Footer'
+// import Footer from '../Components/Footer'
 import Butter from "buttercms";
 import { FiShoppingBag } from 'react-icons/fi';
+import Link from "next/link"
+import { AiFillGithub } from 'react-icons/ai';
+import { RiLinkedinBoxFill } from 'react-icons/ri';
 
 const products = ({ products }) => {
 
@@ -61,7 +64,30 @@ const products = ({ products }) => {
             </div>
           ))}
         </div>
-        <Footer />
+        <footer className="bg-gray-50 text-center lg:text-left text-2xl -mx-10">
+            <hr className="footer" />
+            <div className="text-center p-3 mb-4 foot">
+                <ul className="flex place-content-center">
+                    <li >
+                        <Link href="https://github.com/Onome15" >
+                            <a target="_blank" rel="noopener noreferrer">
+                                <AiFillGithub size={30} className='text-green-400' />
+                            </a>
+                        </Link>
+                    </li>
+
+                    <li >
+                        <Link href="https://www.linkedin.com/in/orhero-onome/" >
+                            <a target="_blank" rel="noopener noreferrer">
+                                <RiLinkedinBoxFill size={30} className='text-green-400' />
+                            </a>
+                        </Link>
+                    </li>
+                </ul>
+                © 2022 Copyright:
+                <Link href="https://orherojoe.netlify.com/"><a className="underline text-purple-900"> JoeTechOn</a></Link>
+            </div>
+        </footer>
       </main>
       <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js" />
       <div hidden id="snipcart" data-api-key="OTYwMzkxMzktOWYyNy00NWY3LTlmMGYtOTFhOTJkYjM0OTI0NjM3OTE4MjY5OTY4OTQ1Njcy"></div>
