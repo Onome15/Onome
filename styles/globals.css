@@ -9,7 +9,6 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
 }
 
 a {
@@ -21,9 +20,6 @@ a {
   box-sizing: border-box;
 
 }
-
-
-/* Glyph, by Harry Roberts */
 
 hr.style-eight {
   overflow: visible; /* For IE */
@@ -37,6 +33,7 @@ hr.style-eight {
   color: red;
   text-align: center;
 }
+
 hr.style-eight:after {
   content: "§";
   display: inline-block;
@@ -46,6 +43,7 @@ hr.style-eight:after {
   padding: 0 0.25em;
   background: white;
 }
+
 hr.style-eight:before { /* Not really supposed to work, but does */
   display: block;
   content: "";
