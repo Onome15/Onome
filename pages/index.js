@@ -22,9 +22,9 @@ const products = ({ products }) => {
 
       <main className="container">
       <div className="bg-red">
-            <nav className="container fixed inset-x-0 top-0 bg-white z-10 text-green-700 title">
-                <h1 className="text-xl md:text-2xl lg:text-3xl md:m-5 font-bold font-mono">Phone-Mall
-                    <span className="float-right text-l md:text-2xl rounded-lg bg-transparent hover:bg-purple-300 p-1 snipcart-checkout title">
+            <nav className="container fixed inset-x-0 top-0 bg-white z-10 text-green-700 px-2">
+                <h1 className="text-xl md:text-2xl lg:text-3xl m-2 md:m-5 font-bold font-mono">Phone-Mall
+                    <span className="float-right text-lg md:text-2xl rounded-lg bg-transparent hover:bg-purple-300 p-1 snipcart-checkout title">
                         <span className="float-left"><FiShoppingBag size={25} /></span>
                         View
                     </span>
@@ -34,7 +34,7 @@ const products = ({ products }) => {
 
 
         </div>
-        <div className="grid place-items-center mt-20 md:mt-28 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <div className="grid place-items-center mt-20 md:mt-32 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {products.map(product => (
 
             <div key={product.id} className=' relative mb-10 max-w-sm rounded shadow-lg dark:rounded-lg hover:shadow-xl h-full mb-10'>
