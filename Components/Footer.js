@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="bg-gray-50 text-center lg:text-left text-2xl -mx-10">
             <hr className="footer" />
             <div className="text-center p-3 mb-4 foot">
-                <ul className="flex">
+                <ul className="flex place-content-center">
                     <li >
                         <Link href="https://github.com/Onome15" >
                             <a target="_blank" rel="noopener noreferrer">

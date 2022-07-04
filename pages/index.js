@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Script from 'next/script';
 import { MdAddShoppingCart } from 'react-icons/md';
-import Nav from '../Components/Nav'
+// import Nav from '../Components/Nav'
 import Footer from '../Components/Footer'
 import Butter from "buttercms";
+import { FiShoppingBag } from 'react-icons/fi';
 
 const products = ({ products }) => {
 
@@ -17,7 +18,19 @@ const products = ({ products }) => {
       </Head>
 
       <main className="container">
-        <Nav />
+      <div className="bg-red">
+            <nav className="container fixed inset-x-0 top-0 bg-white z-10 text-green-700 title">
+                <h1 className="text-xl md:text-2xl lg:text-3xl md:m-5 font-bold font-mono">Phone-Mall
+                    <span className="float-right text-l md:text-2xl rounded-lg bg-transparent hover:bg-purple-300 p-1 snipcart-checkout title">
+                        <span className="float-left"><FiShoppingBag size={25} /></span>
+                        View
+                    </span>
+                </h1>
+                <hr className="style-eight" />
+            </nav>
+
+
+        </div>
         <div className="grid place-items-center mt-20 md:mt-28 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {products.map(product => (
 
