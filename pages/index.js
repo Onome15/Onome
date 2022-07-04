@@ -18,7 +18,7 @@ const products = ({ products }) => {
 
       <main className="container">
         <Nav />
-        <div className="grid place-items-center mt-32 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <div className="grid place-items-center mt-20 md:mt-28 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {products.map(product => (
 
             <div key={product.id} className=' relative mb-10 max-w-sm rounded shadow-lg dark:rounded-lg hover:shadow-xl h-full mb-10'>
