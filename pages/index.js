@@ -12,7 +12,7 @@ import { RiLinkedinBoxFill } from 'react-icons/ri';
 const products = ({ products }) => {
 
   return (
-    <div>
+    <div className="bg-gray-800 pt-20 md:pt-32">
       <Head>
         <title>Shop</title>
         <link rel="preconnect" href="https://app.snipcart.com" />
@@ -21,8 +21,8 @@ const products = ({ products }) => {
       </Head>
 
       <main className="container">
-      <div className="bg-red">
-            <nav className="container fixed inset-x-0 top-0 bg-white z-10 text-green-700 px-2">
+      <div>
+            <nav className="container fixed inset-x-0 top-0 z-10 text-green-700 px-2 bg-gray-800">
                 <h1 className="text-xl md:text-2xl lg:text-3xl m-2 md:m-5 font-bold font-mono">Phone-Mall
                     <span className="float-right text-lg md:text-2xl rounded-lg bg-transparent hover:bg-purple-300 p-1 snipcart-checkout title">
                         <span className="float-left"><FiShoppingBag size={25} /></span>
@@ -34,22 +34,22 @@ const products = ({ products }) => {
 
 
         </div>
-        <div className="grid place-items-center mt-20 md:mt-32 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <div className="grid place-items-center gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {products.map(product => (
 
-            <div key={product.id} className=' relative mb-10 max-w-sm rounded shadow-lg dark:rounded-lg hover:shadow-xl h-full mb-10'>
+            <div key={product.id} className=' relative mb-10 max-w-sm rounded shadow-xl dark:rounded-lg hover:shadow-2xl hover:shadow-grey-50 h-full mb-10'>
               <img src={product.image} alt={`${product.name}`} className="w-full" />
               <div className="px-4 py-4 items-center">
                 <div className="text-xl mb-5">
-                  <h3 className="text-purple-500 font-bold uppercase">{product.name}
+                  <h3 className="text-slate-400 font-bold uppercase">{product.name}
                     <span className="float-right text-green-500"> ${product.price}</span>
                   </h3>
                 </div>
-                <p className='flex-1 justify-self-center'> {product.description}</p> <br /><br />
+                <p className='flex-1 justify-self-center text-slate-200'> {product.description}</p> <br /><br />
                 <button className="absolute bottom-10 left-1/2 transform 
                 -translate-x-1/2 w-64 sm:w-52 btn flex-1 text-xl 
-                bg-transparent hover:bg-purple-500 text-purple-500 font-semibold 
-                hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent 
+                bg-transparent hover:bg-slate-400 text-slate-400 font-semibold 
+                hover:text-white py-2 px-4 border border-slate-400 hover:border-transparent 
                 items-center rounded justify-self-center mt-10 snipcart-add-item"
                   data-item-id={product.id}
                   data-item-image={product.image}
@@ -64,7 +64,7 @@ const products = ({ products }) => {
             </div>
           ))}
         </div>
-        <footer className="bg-gray-50 text-center lg:text-left text-2xl -mx-10">
+        <footer className="bg-gray-900 text-slate-200 text-center lg:text-left text-2xl -mx-10">
             <hr className="footer" />
             <div className="text-center p-3 mb-4 foot">
                 <ul className="flex place-content-center">
@@ -85,7 +85,7 @@ const products = ({ products }) => {
                     </li>
                 </ul>
                 © 2022 Copyright:
-                <Link href="https://orherojoe.netlify.com/"><a className="underline text-purple-900"> JoeTechOn</a></Link>
+                <Link href="https://orherojoe.netlify.com/"><a className="underline"> JoeTechOn</a></Link>
             </div>
         </footer>
       </main>
