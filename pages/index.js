@@ -22,8 +22,8 @@ const products = ({ products }) => {
 
       <main className="container">
       <div>
-            <nav className="container fixed inset-x-0 top-0 z-10 text-green-700 px-2 bg-gray-800">
-                <h1 className="text-xl md:text-2xl lg:text-3xl m-2 md:m-5 font-bold font-mono">Phone-Mall
+            <nav className="container fixed inset-x-0 top-0 z-10 text-slate-100 px-2 bg-gray-800">
+                <h1 className="text-xl md:text-2xl lg:text-3xl m-2 md:m-5 font-bold font-mono ">Phone-Mall
                     <span className="float-right text-lg md:text-2xl rounded-lg bg-transparent hover:bg-purple-300 p-1 snipcart-checkout title">
                         <span className="float-left"><FiShoppingBag size={25} /></span>
                         View
