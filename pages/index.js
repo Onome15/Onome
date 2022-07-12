@@ -64,9 +64,9 @@ const products = ({ products }) => {
             </div>
           ))}
         </div>
-        <footer className="bg-gray-900 text-slate-200 text-center lg:text-left text-2xl -mx-10">
+        <footer className="bg-gray-900 text-slate-200 text-center lg:text-left text-2xl md:-mx-10 -mx-4">
             <hr className="footer" />
-            <div className="text-center p-3 mb-4 foot">
+            <div className="text-center p-3 pb-4 foot">
                 <ul className="flex place-content-center">
                     <li >
                         <Link href="https://github.com/Onome15" >
