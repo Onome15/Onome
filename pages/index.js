@@ -64,7 +64,7 @@ const products = ({ products }) => {
             </div>
           ))}
         </div>
-        <footer className="bg-gray-900 text-slate-200 text-center lg:text-left text-2xl md:-mx-10 -mx-4">
+        <footer className="bg-gray-800 text-slate-200 text-center lg:text-left text-2xl md:-mx-10 -mx-4">
             <hr className="footer" />
             <div className="text-center p-3 pb-4 foot">
                 <ul className="flex place-content-center">
